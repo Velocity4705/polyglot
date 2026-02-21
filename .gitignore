@@ -1,0 +1,29 @@
+# Binaries
+bin/
+polyglot
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Go
+go.sum
+
+# Output from tests
+test/fixtures/*.out
+test/fixtures/hello
+test/fixtures/args
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
