@@ -42,7 +42,9 @@ jobs:
         go mod verify
 
     - name: Run go vet
-      run: go vet ./cmd/... ./internal/... ./pkg/... ./test
+      run: |
+        echo "Running go vet on all packages..."
+        go list ./cmd/... ./internal/... ./pkg/... ./test | xargs go vet
 
     - name: Check formatting
       run: |
@@ -53,7 +55,10 @@ jobs:
         fi
 
     - name: Run tests
-      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./cmd/... ./internal/... ./pkg/... ./test
+      run: |
+        echo "Running tests on all packages..."
+        go test -v -race -coverprofile=coverage.txt -covermode=atomic \
+          $(go list ./cmd/... ./internal/... ./pkg/... ./test)
 
     - name: Upload coverage
       uses: codecov/codecov-action@v3
