@@ -8,15 +8,24 @@ echo "Installing Polyglot..."
 
 # Clone repository to temp directory
 TEMP_DIR=$(mktemp -d)
-cd "$TEMP_DIR"
+echo "→ Using temp directory: $TEMP_DIR"
+cd "$TEMP_DIR" || exit 1
 
 echo "→ Cloning repository..."
-git clone --depth 1 https://github.com/Velocity4705/polyglot.git
-cd polyglot
+if ! git clone --depth 1 https://github.com/Velocity4705/polyglot.git; then
+    echo "✗ Failed to clone repository"
+    exit 1
+fi
+
+cd polyglot || exit 1
+echo "→ Current directory: $(pwd)"
 
 # Build
 echo "→ Building..."
-make build
+if ! make build; then
+    echo "✗ Build failed"
+    exit 1
+fi
 
 # Install
 echo "→ Installing to /usr/local/bin..."
@@ -27,7 +36,7 @@ else
 fi
 
 # Cleanup
-cd /
+cd / || exit 1
 rm -rf "$TEMP_DIR"
 
 echo "✓ Polyglot installed successfully!"
