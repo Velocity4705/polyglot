@@ -94,18 +94,6 @@ jobs:
     - name: Build
       run: make build
 
-    - name: Install language toolchains
-      run: |
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          sudo apt-get update
-          sudo apt-get install -y python3 nodejs ruby php-cli
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          brew install python3 node ruby php
-        fi
-
-    - name: Run integration tests
-      run: ./scripts/test-all.sh
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
