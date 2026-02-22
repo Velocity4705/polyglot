@@ -26,20 +26,12 @@ A universal compiler and interpreter wrapper that detects programming languages 
 
 ### Installation
 
-**Quick Install (macOS/Linux)**:
-
-**Option 1**:
+**Quick Install (one-liner)**:
 ```bash
-curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install-polyglot.sh | bash
-```
-**Option 2 (If Option 1 doesn't work)**:
-```bash
-git clone https://github.com/Velocity4705/polyglot.git
-cd polyglot
-./scripts/install-polyglot.sh
+curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
 ```
 
-**From Source**:
+**Or install from source**:
 ```bash
 git clone https://github.com/Velocity4705/polyglot.git
 cd polyglot

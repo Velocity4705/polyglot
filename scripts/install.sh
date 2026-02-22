@@ -1,27 +1,38 @@
 #!/bin/bash
+# Polyglot Quick Installer
+# Usage: curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
 
 set -e
 
 echo "Installing Polyglot..."
 
-# Build the binary
-echo "Building..."
-go build -o polyglot ./cmd/polyglot
+# Clone repository to temp directory
+TEMP_DIR=$(mktemp -d)
+cd "$TEMP_DIR"
 
-# Determine install location
-INSTALL_DIR="/usr/local/bin"
-if [ ! -w "$INSTALL_DIR" ]; then
-    echo "Need sudo permissions to install to $INSTALL_DIR"
-    sudo mv polyglot "$INSTALL_DIR/polyglot"
-    sudo chmod +x "$INSTALL_DIR/polyglot"
+echo "→ Cloning repository..."
+git clone --depth 1 https://github.com/Velocity4705/polyglot.git
+cd polyglot
+
+# Build
+echo "→ Building..."
+make build
+
+# Install
+echo "→ Installing to /usr/local/bin..."
+if [ -w "/usr/local/bin" ]; then
+    mv bin/polyglot /usr/local/bin/polyglot
 else
-    mv polyglot "$INSTALL_DIR/polyglot"
-    chmod +x "$INSTALL_DIR/polyglot"
+    sudo mv bin/polyglot /usr/local/bin/polyglot
 fi
+
+# Cleanup
+cd /
+rm -rf "$TEMP_DIR"
 
 echo "✓ Polyglot installed successfully!"
 echo ""
 echo "Try it out:"
-echo "  polyglot --help"
-echo "  polyglot check"
+echo "  polyglot version"
 echo "  polyglot list"
+echo "  polyglot run hello.py"
