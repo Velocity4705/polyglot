@@ -18,23 +18,37 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
         go-version: ${{ matrix.go-version }}
+        cache: true
 
     - name: Verify workspace
       run: |
+        echo "=== Workspace Verification ==="
         echo "Current directory: $(pwd)"
-        echo "Directory contents:"
+        echo ""
+        echo "All files in current directory:"
+        find . -maxdepth 2 -type f -name "*.go" | head -20
+        echo ""
+        echo "Directory structure:"
         ls -la
-        echo "Checking for cmd directory:"
-        test -d cmd && echo "✓ cmd directory exists" || echo "✗ cmd directory missing"
+        echo ""
+        echo "cmd directory:"
+        ls -la cmd/ 2>&1 || echo "cmd directory not found"
+        echo ""
+        echo "Checking for go.mod:"
+        cat go.mod 2>&1 | head -5 || echo "go.mod not found"
+        echo ""
         echo "Go version:"
         go version
-        echo "Go env:"
-        go env GOPATH GOROOT
+        echo ""
+        echo "Testing go list:"
+        go list . 2>&1 || echo "go list . failed"
 
     - name: Install dependencies
       run: |
@@ -44,7 +58,11 @@ jobs:
     - name: Run go vet
       run: |
         echo "Running go vet on all packages..."
-        go list ./cmd/... ./internal/... ./pkg/... ./test | xargs go vet
+        echo "Packages found:"
+        go list ./cmd/... ./internal/... ./pkg/... ./test 2>&1 || echo "go list failed with exit code $?"
+        echo ""
+        echo "Running vet:"
+        go list ./cmd/... ./internal/... ./pkg/... ./test 2>&1 | xargs -r go vet || exit 1
 
     - name: Check formatting
       run: |
