@@ -9,9 +9,6 @@ polyglot
 # Test binaries
 *.test
 
-# Go
-go.sum
-
 # Output from tests
 test/fixtures/*.out
 test/fixtures/hello

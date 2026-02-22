@@ -1,10 +1,18 @@
 run:
   timeout: 5m
   tests: true
-  skip-dirs:
+
+issues:
+  exclude-dirs:
     - test/fixtures
-  skip-files:
+  exclude-files:
     - ".*\\.pb\\.go$"
+  exclude-rules:
+    - path: test/
+      linters:
+        - errcheck
+  max-issues-per-linter: 0
+  max-same-issues: 0
 
 linters:
   enable:
@@ -16,17 +24,6 @@ linters:
     - gosimple
     - ineffassign
 
-linters-settings:
-  govet:
-    check-shadowing: false
-
-issues:
-  exclude-rules:
-    - path: test/
-      linters:
-        - errcheck
-  max-issues-per-linter: 0
-  max-same-issues: 0
-
 output:
-  format: colored-line-number
+  formats:
+    - format: colored-line-number
