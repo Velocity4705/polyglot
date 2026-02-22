@@ -1,11 +1,9 @@
 # Polyglot - Universal Compiler Wrapper
 
-[![CI](https://github.com/yourusername/polyglot/workflows/CI/badge.svg)](https://github.com/yourusername/polyglot/actions)
-[![Release](https://github.com/yourusername/polyglot/workflows/Release/badge.svg)](https://github.com/yourusername/polyglot/actions)
-[![Go Report Card](https://goreportcard.com/badge/github.com/yourusername/polyglot)](https://goreportcard.com/report/github.com/yourusername/polyglot)
+[![CI](https://github.com/Velocity4705/polyglot/workflows/CI/badge.svg)](https://github.com/Velocity4705/polyglot/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)](https://go.dev/)
-[![Docker](https://img.shields.io/docker/v/yourusername/polyglot?label=docker)](https://hub.docker.com/r/yourusername/polyglot)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/Velocity4705/polyglot/releases)
 
 A universal compiler and interpreter wrapper that detects programming languages by file extension and executes them with the appropriate toolchain.
 
@@ -28,27 +26,26 @@ A universal compiler and interpreter wrapper that detects programming languages 
 
 ### Installation
 
-**macOS/Linux (Homebrew)**:
-```bash
-brew install polyglot
-```
+**Quick Install (macOS/Linux)**:
+**Option 1**:
 
-**Universal Installer**:
 ```bash
-curl -fsSL https://get.polyglot.dev | bash
+curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install-polyglot.sh | bash
 ```
+**Option 2 (If Option 1 doesn't work)**:
 
-**Docker**:
 ```bash
-docker pull yourusername/polyglot:latest
+git clone https://github.com/Velocity4705/polyglot.git
+cd polyglot
+./scripts/install-polyglot.sh
 ```
 
 **From Source**:
 ```bash
-git clone https://github.com/yourusername/polyglot.git
+git clone https://github.com/Velocity4705/polyglot.git
 cd polyglot
-go build -o polyglot ./cmd/polyglot
-sudo mv polyglot /usr/local/bin/
+make build
+sudo make install
 ```
 
 ### Usage
@@ -219,7 +216,7 @@ custom_extensions:
 
 ### Quick Run
 ```bash
-docker run -v $(pwd):/workspace yourusername/polyglot run hello.py
+docker run -v $(pwd):/workspace velocity4705/polyglot run hello.py
 ```
 
 ### Development Environment

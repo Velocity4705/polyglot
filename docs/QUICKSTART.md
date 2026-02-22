@@ -7,7 +7,7 @@ Get up and running with Polyglot in 5 minutes!
 ### Option 1: Quick Install (Recommended)
 
 ```bash
-git clone https://github.com/yourusername/polyglot.git
+git clone https://github.com/Velocity4705/polyglot.git
 cd polyglot
 ./scripts/install.sh
 ```
@@ -15,7 +15,7 @@ cd polyglot
 ### Option 2: Manual Build
 
 ```bash
-git clone https://github.com/yourusername/polyglot.git
+git clone https://github.com/Velocity4705/polyglot.git
 cd polyglot
 make build
 sudo cp bin/polyglot /usr/local/bin/
@@ -24,7 +24,7 @@ sudo cp bin/polyglot /usr/local/bin/
 ### Option 3: Go Install
 
 ```bash
-go install github.com/yourusername/polyglot/cmd/polyglot@latest
+go install github.com/Velocity4705/polyglot/cmd/polyglot@latest
 ```
 
 ## Verify Installation

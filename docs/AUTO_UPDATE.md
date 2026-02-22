@@ -184,7 +184,7 @@ sudo apt upgrade polyglot
 
 ```bash
 # Download latest release
-curl -LO https://github.com/yourusername/polyglot/releases/latest/download/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/latest/download/polyglot-linux-amd64
 
 # Make executable
 chmod +x polyglot-linux-amd64
@@ -196,7 +196,7 @@ sudo mv polyglot-linux-amd64 /usr/local/bin/polyglot
 ### Via Go Install
 
 ```bash
-go install github.com/yourusername/polyglot/cmd/polyglot@latest
+go install github.com/Velocity4705/polyglot/cmd/polyglot@latest
 ```
 
 ## Disabling Background Checks
@@ -318,7 +318,7 @@ Yes, you can install any previous version manually:
 
 ```bash
 # Download specific version
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
 
 # Install
 chmod +x polyglot-linux-amd64
@@ -335,7 +335,7 @@ Yes, but you may want to pin specific versions in CI/CD for reproducibility:
 
 ```bash
 # Pin to specific version
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.1/polyglot-linux-amd64
 ```
 
 ## Related Commands
@@ -349,4 +349,4 @@ curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyg
 - [Installation Guide](QUICKSTART.md)
 - [Configuration](CONFIGURATION.md)
 - [Changelog](../CHANGELOG.md)
-- [GitHub Releases](https://github.com/yourusername/polyglot/releases)
+- [GitHub Releases](https://github.com/Velocity4705/polyglot/releases)

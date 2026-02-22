@@ -242,8 +242,8 @@ chmod +r file.py
 
 ## Links
 
-- **Repo**: https://github.com/yourusername/polyglot
-- **Issues**: https://github.com/yourusername/polyglot/issues
+- **Repo**: https://github.com/Velocity4705/polyglot
+- **Issues**: https://github.com/Velocity4705/polyglot/issues
 - **Docs**: [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
 
 ## Version

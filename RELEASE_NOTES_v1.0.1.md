@@ -30,7 +30,7 @@
 
 ### New Installations
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/polyglot/main/scripts/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
 ```
 
 ### Upgrading from v1.0.0
@@ -40,7 +40,7 @@ polyglot update
 
 Or manually:
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/polyglot/main/scripts/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
 ```
 
 ## Documentation

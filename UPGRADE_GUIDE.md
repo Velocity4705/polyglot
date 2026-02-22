@@ -46,16 +46,16 @@ choco upgrade polyglot
 1. Download the latest release:
 ```bash
 # Linux amd64
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.1/polyglot-linux-amd64
 
 # macOS amd64 (Intel)
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyglot-darwin-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.1/polyglot-darwin-amd64
 
 # macOS arm64 (Apple Silicon)
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyglot-darwin-arm64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.1/polyglot-darwin-arm64
 
 # Windows amd64
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.1/polyglot-windows-amd64.exe
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.1/polyglot-windows-amd64.exe
 ```
 
 2. Make it executable (Unix only):
@@ -119,7 +119,7 @@ None! v1.0.1 is fully backward compatible with v1.0.0.
 1. First upgrade to v1.0.0 (if not already):
 ```bash
 # Download v1.0.0
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
 chmod +x polyglot-linux-amd64
 sudo mv polyglot-linux-amd64 /usr/local/bin/polyglot
 ```
@@ -209,7 +209,7 @@ To manually rollback to v1.0.0:
 
 ```bash
 # Download v1.0.0
-curl -LO https://github.com/yourusername/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
+curl -LO https://github.com/Velocity4705/polyglot/releases/download/v1.0.0/polyglot-linux-amd64
 chmod +x polyglot-linux-amd64
 sudo mv polyglot-linux-amd64 /usr/local/bin/polyglot
 
@@ -234,9 +234,9 @@ polyglot version
 If you encounter issues during upgrade:
 
 1. Check the [FAQ](FAQ.md)
-2. Search [existing issues](https://github.com/yourusername/polyglot/issues)
-3. Open a [new issue](https://github.com/yourusername/polyglot/issues/new)
-4. Ask in [discussions](https://github.com/yourusername/polyglot/discussions)
+2. Search [existing issues](https://github.com/Velocity4705/polyglot/issues)
+3. Open a [new issue](https://github.com/Velocity4705/polyglot/issues/new)
+4. Ask in [discussions](https://github.com/Velocity4705/polyglot/discussions)
 
 ## Best Practices
 

@@ -397,7 +397,7 @@ Polyglot is now production-ready with:
 
 ## Links
 
-- [GitHub Repository](https://github.com/yourusername/polyglot)
-- [Issue Tracker](https://github.com/yourusername/polyglot/issues)
+- [GitHub Repository](https://github.com/Velocity4705/polyglot)
+- [Issue Tracker](https://github.com/Velocity4705/polyglot/issues)
 - [Roadmap](ROADMAP.md)
 - [Contributing](CONTRIBUTING.md)
