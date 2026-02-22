@@ -27,11 +27,10 @@ jobs:
     - name: Install dependencies
       run: |
         go mod download
-        go mod tidy
         go mod verify
 
     - name: Run go vet
-      run: go vet ./cmd/... ./internal/... ./pkg/...
+      run: go vet ./cmd/... ./internal/... ./pkg/... ./test
 
     - name: Check formatting
       run: |
@@ -42,7 +41,7 @@ jobs:
         fi
 
     - name: Run tests
-      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./cmd/... ./internal/... ./pkg/...
+      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./cmd/... ./internal/... ./pkg/... ./test
 
     - name: Upload coverage
       uses: codecov/codecov-action@v3
@@ -80,9 +79,10 @@ jobs:
     - name: Install dependencies
       run: |
         go mod download
-        go mod tidy
+        go mod verify
 
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v3
       with:
         version: latest
+        args: --timeout=5m

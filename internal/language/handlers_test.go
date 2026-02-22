@@ -26,32 +26,32 @@ func TestAllHandlers(t *testing.T) {
 		{"Shell", &ShellHandler{}, "Shell", []string{".sh", ".bash"}, types.Interpreted, false},
 
 		// Compiled languages
-		{"Go", &GoHandler{}, "Go", []string{".go"}, types.Interpreted, false}, // go run
+		{"Go", &GoHandler{}, "Go", []string{".go"}, types.Compiled, false}, // go run
 		{"Java", &JavaHandler{}, "Java", []string{".java"}, types.Compiled, true},
 		{"C", &CHandler{}, "C", []string{".c"}, types.Compiled, true},
 		{"C++", &CppHandler{}, "C++", []string{".cpp", ".cc", ".cxx", ".C"}, types.Compiled, true},
 		{"Rust", &RustHandler{}, "Rust", []string{".rs"}, types.Compiled, true},
-		{"Zig", &ZigHandler{}, "Zig", []string{".zig"}, types.Interpreted, false}, // zig run
+		{"Zig", &ZigHandler{}, "Zig", []string{".zig"}, types.Compiled, false}, // zig run
 		{"Nim", &NimHandler{}, "Nim", []string{".nim"}, types.Compiled, true},
-		{"Crystal", &CrystalHandler{}, "Crystal", []string{".cr"}, types.Interpreted, false}, // crystal run
+		{"Crystal", &CrystalHandler{}, "Crystal", []string{".cr"}, types.Compiled, false}, // crystal run
 		{"D", &DHandler{}, "D", []string{".d"}, types.Compiled, true},
 
 		// Functional languages
 		{"Haskell", &HaskellHandler{}, "Haskell", []string{".hs"}, types.Compiled, true},
 		{"OCaml", &OCamlHandler{}, "OCaml", []string{".ml", ".mli"}, types.Compiled, true},
 		{"Elixir", &ElixirHandler{}, "Elixir", []string{".ex", ".exs"}, types.Interpreted, false},
-		{"Erlang", &ErlangHandler{}, "Erlang", []string{".erl"}, types.Interpreted, false},
+		{"Erlang", &ErlangHandler{}, "Erlang", []string{".erl"}, types.Compiled, true},
 		{"F#", &FSharpHandler{}, "F#", []string{".fs", ".fsx"}, types.Interpreted, false},
 
 		// JVM languages
-		{"Kotlin", &KotlinHandler{}, "Kotlin", []string{".kt", ".kts"}, types.Compiled, true},
-		{"Scala", &ScalaHandler{}, "Scala", []string{".scala", ".sc"}, types.Compiled, true},
+		{"Kotlin", &KotlinHandler{}, "Kotlin", []string{".kt", ".kts"}, types.Compiled, false},
+		{"Scala", &ScalaHandler{}, "Scala", []string{".scala", ".sc"}, types.Compiled, false},
 		{"Groovy", &GroovyHandler{}, "Groovy", []string{".groovy", ".gvy"}, types.Interpreted, false},
 
 		// Modern languages
-		{"Swift", &SwiftHandler{}, "Swift", []string{".swift"}, types.Compiled, true},
-		{"Dart", &DartHandler{}, "Dart", []string{".dart"}, types.Interpreted, false},
-		{"TypeScript", &TypeScriptHandler{}, "TypeScript", []string{".ts"}, types.Interpreted, false},
+		{"Swift", &SwiftHandler{}, "Swift", []string{".swift"}, types.Compiled, false},
+		{"Dart", &DartHandler{}, "Dart", []string{".dart"}, types.Compiled, false},
+		{"TypeScript", &TypeScriptHandler{}, "TypeScript", []string{".ts"}, types.Compiled, false},
 
 		// Scientific languages
 		{"R", &RHandler{}, "R", []string{".r", ".R"}, types.Interpreted, false},

@@ -1,16 +1,13 @@
 run:
   timeout: 5m
   tests: true
+  skip-dirs:
+    - test/fixtures
 
 issues:
-  exclude-dirs:
-    - test/fixtures
   exclude-files:
     - ".*\\.pb\\.go$"
-  exclude-rules:
-    - path: test/
-      linters:
-        - errcheck
+    - "test/fixtures/.*"
   max-issues-per-linter: 0
   max-same-issues: 0
 
@@ -23,6 +20,11 @@ linters:
     - unused
     - gosimple
     - ineffassign
+
+linters-settings:
+  govet:
+    enable:
+      - shadow
 
 output:
   formats:
