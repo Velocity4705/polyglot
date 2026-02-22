@@ -81,7 +81,7 @@ func configInit(cmd *cobra.Command, args []string) error {
 		fmt.Printf("Configuration file already exists: %s\n", configPath)
 		fmt.Print("Overwrite? [y/N]: ")
 		var response string
-		fmt.Scanln(&response)
+		_, _ = fmt.Scanln(&response)
 		if strings.ToLower(response) != "y" {
 			fmt.Println("Cancelled")
 			return nil

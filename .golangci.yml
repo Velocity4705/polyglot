@@ -1,6 +1,8 @@
 run:
   timeout: 5m
   tests: true
+  skip-dirs:
+    - test/fixtures
 
 issues:
   exclude-dirs:

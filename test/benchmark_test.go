@@ -9,7 +9,7 @@ import (
 func BenchmarkDetection(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "run", "--dry-run", "fixtures/hello.py")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -23,7 +23,7 @@ func BenchmarkPythonExecution(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "run", "-q", "fixtures/hello.py")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -37,7 +37,7 @@ func BenchmarkGoExecution(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "run", "-q", "fixtures/hello.go")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -51,7 +51,7 @@ func BenchmarkJavaScriptExecution(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "run", "-q", "fixtures/hello.js")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -59,7 +59,7 @@ func BenchmarkJavaScriptExecution(b *testing.B) {
 func BenchmarkConfigLoad(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "config", "show")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -67,6 +67,6 @@ func BenchmarkConfigLoad(b *testing.B) {
 func BenchmarkListCommand(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		cmd := exec.Command(polyglotBinary, "list")
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }

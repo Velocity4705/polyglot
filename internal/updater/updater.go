@@ -152,7 +152,7 @@ func (u *Updater) Update(release *Release) error {
 	}
 	if err := u.replaceBinary(tmpFile, currentBinary); err != nil {
 		// Restore backup on failure
-		u.copyFile(backupPath, currentBinary)
+		_ = u.copyFile(backupPath, currentBinary)
 		os.Remove(backupPath)
 		return fmt.Errorf("failed to install new version: %w", err)
 	}
@@ -312,7 +312,7 @@ func (u *Updater) replaceBinary(newBinary, currentBinary string) error {
 		// Copy new binary
 		if err := u.copyFile(newBinary, currentBinary); err != nil {
 			// Restore old binary
-			os.Rename(oldBinary, currentBinary)
+			_ = os.Rename(oldBinary, currentBinary)
 			return err
 		}
 
@@ -343,7 +343,7 @@ func (u *Updater) CheckForUpdatesInBackground() {
 			return
 		}
 
-		u.UpdateLastCheckTime()
+		_ = u.UpdateLastCheckTime()
 
 		if hasUpdate {
 			fmt.Println()

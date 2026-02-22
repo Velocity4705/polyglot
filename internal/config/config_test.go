@@ -248,7 +248,7 @@ func TestSaveAndLoad(t *testing.T) {
 
 	// Check file exists
 	configPath := filepath.Join(tmpDir, ".polyglot", "config.yaml")
-	if _, err := os.Stat(configPath); os.IsNotExist(err) {
+	if _, statErr := os.Stat(configPath); os.IsNotExist(statErr) {
 		t.Fatal("Config file was not created")
 	}
 
