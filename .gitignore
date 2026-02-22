@@ -1,6 +1,7 @@
 # Binaries
 bin/
-polyglot
+/polyglot
+!cmd/polyglot/
 *.exe
 *.dll
 *.so

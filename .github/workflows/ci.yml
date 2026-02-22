@@ -83,7 +83,7 @@ jobs:
     - name: Run tests
       run: |
         echo "Running tests on all packages..."
-        go test -v -race -coverprofile=coverage.txt -covermode=atomic \
+        go test -v -race -timeout=5m -coverprofile=coverage.txt -covermode=atomic \
           ./cmd/polyglot ./internal/... ./pkg/... ./test
 
     - name: Upload coverage
