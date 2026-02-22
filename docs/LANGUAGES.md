@@ -1,77 +1,60 @@
 # Supported Languages
 
-This document lists all languages currently supported by Polyglot and their status.
+Polyglot supports 30 programming languages across interpreted, compiled, and esoteric categories.
 
-## Milestone 1, 2 & 3 (Current) - 16 Languages! ✅
+## Overview
 
-### Interpreted Languages
+| Category | Count | Languages |
+|----------|-------|-----------|
+| Interpreted | 16 | Python, JavaScript, Ruby, PHP, Perl, Lua, Shell, Elixir, Erlang, Groovy, R, Julia, Haskell, OCaml, TypeScript, Dart |
+| Compiled | 14 | Go, Java, C, C++, Rust, Zig, Nim, Crystal, D, F#, Kotlin, Scala, Swift |
+| Esoteric | 1 | Brainfuck |
+| **Total** | **30** | |
 
-| Language   | Extension | Type        | Command    | Status |
-|------------|-----------|-------------|------------|--------|
-| Python     | .py       | Interpreted | python3    | ✅     |
-| JavaScript | .js       | Interpreted | node       | ✅     |
-| Ruby       | .rb       | Interpreted | ruby       | ✅     |
-| PHP        | .php      | Interpreted | php        | ✅     |
-| Perl       | .pl       | Interpreted | perl       | ✅     |
-| Lua        | .lua      | Interpreted | lua        | ✅     |
-| Shell      | .sh .bash | Interpreted | bash       | ✅     |
+## Interpreted Languages
 
-### Compiled Languages
+| Language | Extensions | Command | Status |
+|----------|-----------|---------|--------|
+| Python | `.py` | `python3` | ✅ |
+| JavaScript | `.js` | `node` | ✅ |
+| Ruby | `.rb` | `ruby` | ✅ |
+| PHP | `.php` | `php` | ✅ |
+| Perl | `.pl` | `perl` | ✅ |
+| Lua | `.lua` | `lua` | ✅ |
+| Shell | `.sh` `.bash` | `bash` | ✅ |
+| Elixir | `.ex` `.exs` | `elixir` | ✅ |
+| Erlang | `.erl` | `escript` | ✅ |
+| Groovy | `.groovy` | `groovy` | ✅ |
+| R | `.r` `.R` | `Rscript` | ✅ |
+| Julia | `.jl` | `julia` | ✅ |
+| Haskell | `.hs` | `runhaskell` | ✅ |
+| OCaml | `.ml` `.mli` | `ocaml` | ✅ |
+| TypeScript | `.ts` | `ts-node` | ✅ |
+| Dart | `.dart` | `dart` | ✅ |
 
-| Language | Extension | Type     | Compiler/Runner | Status |
-|----------|-----------|----------|-----------------|--------|
-| Go       | .go       | Compiled | go run          | ✅     |
-| Java     | .java     | Compiled | javac + java    | ✅     |
-| C        | .c        | Compiled | gcc             | ✅     |
-| C++      | .cpp .cc .cxx .C | Compiled | g++      | ✅     |
-| Rust     | .rs       | Compiled | rustc           | ✅     |
-| Zig      | .zig      | Compiled | zig run         | ✅     |
-| Nim      | .nim      | Compiled | nim c           | ✅     |
-| Crystal  | .cr       | Compiled | crystal run     | ✅     |
-| D        | .d        | Compiled | dmd             | ✅     |
+## Compiled Languages
 
-**Total: 16 languages supported!**
+| Language | Extensions | Compiler | Status |
+|----------|-----------|----------|--------|
+| Go | `.go` | `go run` | ✅ |
+| Java | `.java` | `javac` + `java` | ✅ |
+| C | `.c` | `gcc` | ✅ |
+| C++ | `.cpp` `.cc` `.cxx` `.C` | `g++` | ✅ |
+| Rust | `.rs` | `rustc` | ✅ |
+| Zig | `.zig` | `zig run` | ✅ |
+| Nim | `.nim` | `nim c` | ✅ |
+| Crystal | `.cr` | `crystal run` | ✅ |
+| D | `.d` | `dmd` | ✅ |
+| F# | `.fs` `.fsx` | `dotnet fsi` | ✅ |
+| Kotlin | `.kt` `.kts` | `kotlinc` + `kotlin` | ✅ |
+| Scala | `.scala` | `scalac` + `scala` | ✅ |
+| Swift | `.swift` | `swift` | ✅ |
 
-## Milestone 2 (Completed) ✅ - Compiled Languages
+## Esoteric Languages
 
-All Milestone 2 languages have been implemented and tested.
-
-## Milestone 3 (Completed) ✅ - More Languages
-
-All Milestone 3 languages have been implemented and tested.
-
-## Milestone 4 (Planned) - Esoteric & Specialty
-
-| Language | Extension | Type        | Command | Status |
-|----------|-----------|-------------|---------|--------|
-| Perl     | .pl       | Interpreted | perl    | 📋     |
-| Lua      | .lua      | Interpreted | lua     | 📋     |
-| Zig      | .zig      | Compiled    | zig     | 📋     |
-| Nim      | .nim      | Compiled    | nim     | 📋     |
-| Crystal  | .cr       | Compiled    | crystal | 📋     |
-| D        | .d        | Compiled    | dmd     | 📋     |
-| Shell    | .sh       | Interpreted | bash    | 📋     |
-
-## Milestone 4 (Planned) - Esoteric & Specialty
-
-| Language   | Extension | Type        | Command  | Status |
-|------------|-----------|-------------|----------|--------|
-| Haskell    | .hs       | Compiled    | ghc      | 📋     |
-| OCaml      | .ml       | Compiled    | ocamlc   | 📋     |
-| Erlang     | .erl      | Compiled    | erlc     | 📋     |
-| Elixir     | .ex       | Interpreted | elixir   | 📋     |
-| Kotlin     | .kt       | Compiled    | kotlinc  | 📋     |
-| Scala      | .scala    | Compiled    | scalac   | 📋     |
-| Clojure    | .clj      | Interpreted | clojure  | 📋     |
-| Brainfuck  | .bf       | Interpreted | bf       | 📋     |
-| Assembly   | .asm      | Compiled    | nasm     | 📋     |
-
-## Legend
-
-- ✅ Implemented and tested
-- 📋 Planned for future milestone
-- 🚧 Work in progress
-- ❌ Not supported
+| Language | Extensions | Interpreter | Status |
+|----------|-----------|-------------|--------|
+| Brainfuck | `.bf` `.b` | `bf` | ✅ |
 
 ## Testing Language Support
 

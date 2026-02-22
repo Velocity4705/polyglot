@@ -24,6 +24,7 @@ sudo mv polyglot /usr/local/bin/
 | `polyglot compile <file>` | Compile only | `polyglot compile main.rs` |
 | `polyglot list` | List languages | `polyglot list` |
 | `polyglot check` | Check toolchains | `polyglot check` |
+| `polyglot update` | Update Polyglot | `polyglot update` |
 | `polyglot version` | Show version | `polyglot version` |
 | `polyglot --help` | Show help | `polyglot --help` |
 
@@ -68,6 +69,15 @@ sudo mv polyglot /usr/local/bin/
 polyglot run hello.py
 polyglot run main.go
 polyglot run app.js
+```
+
+### Update Polyglot
+```bash
+# Check and install updates
+polyglot update
+
+# Only check for updates
+polyglot update --check
 ```
 
 ### Pass arguments
@@ -238,9 +248,9 @@ chmod +r file.py
 
 ## Version
 
-**Current**: 0.2.0  
-**Milestone**: 2 & 3 (16 Languages)  
-**Status**: Production Ready
+**Current**: 1.0.1  
+**Milestone**: Production Ready with Auto-Update  
+**Status**: Production Ready ✅
 
 ---
 

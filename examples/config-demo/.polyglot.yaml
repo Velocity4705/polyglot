@@ -1,0 +1,21 @@
+# Example Project Configuration
+
+languages:
+  python:
+    enabled: true
+    flags:
+      - "-O"
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+  
+  javascript:
+    enabled: true
+    environment:
+      NODE_ENV: "development"
+
+custom_extensions:
+  .pyx: Python
+  .jsx: JavaScript
+
+environment:
+  DEMO: "config-demo"

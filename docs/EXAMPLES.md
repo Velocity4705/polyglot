@@ -161,8 +161,8 @@ Summary: 3/5 toolchains installed
 
 ```bash
 $ polyglot version
-Polyglot v0.1.0
-Milestone 1 (MVP)
+Polyglot v1.0.1
+Production Ready - Auto-Update Feature Added!
 Universal compiler and interpreter wrapper
 ```
 
@@ -256,11 +256,28 @@ Future versions will support custom interpreter paths via config files.
 
 ### Project-specific configuration
 
-Coming in Milestone 5: `.polyglot.yaml` for project-specific settings.
+Create a `.polyglot.yaml` file in your project root for project-specific settings:
+
+```yaml
+languages:
+  python:
+    command: python3.11
+  go:
+    env:
+      GOFLAGS: "-race"
+```
+
+See [CONFIGURATION.md](CONFIGURATION.md) for details.
 
 ### Watch mode
 
-Coming in Milestone 6: `polyglot watch` for automatic re-execution on file changes.
+Use `polyglot watch` for automatic re-execution on file changes:
+
+```bash
+polyglot watch app.py
+```
+
+Perfect for development!
 
 ## Tips & Tricks
 

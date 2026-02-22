@@ -1,0 +1,21 @@
+Package: polyglot
+Version: 0.6.0
+Section: devel
+Priority: optional
+Architecture: amd64
+Maintainer: Your Name <your.email@example.com>
+Description: Universal compiler and interpreter wrapper
+ Polyglot is a universal compiler and interpreter wrapper that detects
+ programming languages by file extension and executes them with the
+ appropriate toolchain.
+ .
+ Features:
+  - Supports 30+ programming languages
+  - Automatic language detection
+  - Auto-install missing toolchains
+  - Watch mode for development
+  - Colored output
+  - Comprehensive configuration
+Homepage: https://github.com/yourusername/polyglot
+Depends: libc6 (>= 2.31)
+Recommends: python3, nodejs, ruby, php, perl, lua5.3, gcc, g++

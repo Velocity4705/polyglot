@@ -15,7 +15,14 @@ go.sum
 # Output from tests
 test/fixtures/*.out
 test/fixtures/hello
+test/fixtures/Hello
 test/fixtures/args
+test/fixtures/*.class
+
+# Compiled artifacts
+*.o
+*.a
+*.out
 
 # IDE
 .vscode/
@@ -23,7 +30,82 @@ test/fixtures/args
 *.swp
 *.swo
 *~
+*.iml
 
 # OS
 .DS_Store
 Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Personal configuration (don't commit personal settings)
+.polyglot/config.yaml
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Build artifacts
+dist/
+build/
+*.deb
+*.rpm
+*.pkg
+*.dmg
+
+# Coverage
+*.coverprofile
+coverage.txt
+coverage.html
+
+# Dependencies
+vendor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Rust
+target/
+Cargo.lock
+
+# Java
+*.class
+*.jar
+*.war
+
+# C/C++
+*.o
+*.obj
+*.exe
+*.out
+a.out
+
+# Editor backups
+*~
+.*.swp
+.*.swo

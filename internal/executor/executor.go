@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/yourusername/polyglot/internal/config"
+	"github.com/yourusername/polyglot/internal/ui"
 	"github.com/yourusername/polyglot/pkg/types"
 )
 
@@ -22,6 +24,7 @@ func (e *ExecutionError) Error() string {
 type Executor struct {
 	verbose bool
 	quiet   bool
+	config  *config.Config
 }
 
 func New(verbose, quiet bool) *Executor {
@@ -31,23 +34,50 @@ func New(verbose, quiet bool) *Executor {
 	}
 }
 
+func NewWithConfig(verbose, quiet bool, cfg *config.Config) *Executor {
+	return &Executor{
+		verbose: verbose,
+		quiet:   quiet,
+		config:  cfg,
+	}
+}
+
 func (e *Executor) Run(handler types.LanguageHandler, filename string, args []string) error {
+	// Check if language is enabled
+	if e.config != nil && !e.config.IsLanguageEnabled(string(handler.Name())) {
+		return fmt.Errorf("language %s is disabled in configuration", handler.Name())
+	}
+
 	if handler.NeedsCompilation() {
 		// Compile first
 		output := e.getOutputName(filename)
-		
+
 		if !e.quiet {
-			fmt.Printf("Compiling: %s %s\n", handler.Name(), filename)
+			ui.Step("Compiling %s...", ui.File(filename))
 		}
-		
-		if err := handler.Compile(filename, output); err != nil {
+
+		spinner := ui.NewSpinner(fmt.Sprintf("Compiling %s", handler.Name()))
+		if !e.quiet && !e.verbose {
+			spinner.Start()
+		}
+
+		err := handler.Compile(filename, output)
+
+		if !e.quiet && !e.verbose {
+			spinner.Stop()
+		}
+
+		if err != nil {
+			if !e.quiet {
+				ui.Error("Compilation failed")
+			}
 			return err
 		}
-		
+
 		if !e.quiet {
-			fmt.Printf("Compilation successful\n")
+			ui.Success("Compilation successful")
 		}
-		
+
 		// Clean up compiled binary after execution
 		defer func() {
 			os.Remove(output)
@@ -62,7 +92,11 @@ func (e *Executor) Run(handler types.LanguageHandler, filename string, args []st
 	}
 
 	if !e.quiet {
-		fmt.Printf("Executing: %s %s %s\n", e.getCommand(handler, filename), filename, strings.Join(args, " "))
+		cmdStr := e.getCommand(handler, filename)
+		if len(args) > 0 {
+			cmdStr += " " + strings.Join(args, " ")
+		}
+		ui.Step("Executing: %s", ui.Command(cmdStr))
 	}
 
 	output, err := handler.Run(filename, args)

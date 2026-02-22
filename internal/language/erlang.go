@@ -40,7 +40,7 @@ func (h *ErlangHandler) Run(file string, args []string) ([]byte, error) {
 	// Get module name from filename
 	moduleName := strings.TrimSuffix(filepath.Base(file), ".erl")
 	dir := filepath.Dir(file)
-	
+
 	// Run with erl
 	cmdArgs := []string{"-noshell", "-pa", dir, "-s", moduleName, "main", "-s", "init", "stop"}
 	cmd := exec.Command("erl", cmdArgs...)

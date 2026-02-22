@@ -18,4 +18,6 @@ func init() {
 	rootCmd.AddCommand(runCmd)
 	rootCmd.AddCommand(compileCmd)
 	rootCmd.AddCommand(listCmd)
+	// Note: updateCmd, versionCmd, checkCmd, installCmd, configCmd, watchCmd
+	// are registered in their respective init() functions
 }

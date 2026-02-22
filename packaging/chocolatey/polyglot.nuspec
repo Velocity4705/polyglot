@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>polyglot</id>
+    <version>0.6.0</version>
+    <packageSourceUrl>https://github.com/yourusername/polyglot</packageSourceUrl>
+    <owners>Your Name</owners>
+    <title>Polyglot Universal Compiler</title>
+    <authors>Your Name</authors>
+    <projectUrl>https://github.com/yourusername/polyglot</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/yourusername/polyglot/main/docs/logo.png</iconUrl>
+    <copyright>2026 Your Name</copyright>
+    <licenseUrl>https://github.com/yourusername/polyglot/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/yourusername/polyglot</projectSourceUrl>
+    <docsUrl>https://github.com/yourusername/polyglot/blob/main/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/yourusername/polyglot/issues</bugTrackerUrl>
+    <tags>compiler interpreter polyglot programming languages development cli</tags>
+    <summary>Universal compiler and interpreter wrapper for 30+ programming languages</summary>
+    <description>
+Polyglot is a universal compiler and interpreter wrapper that detects programming languages by file extension and executes them with the appropriate toolchain.
+
+## Features
+
+- Supports 30+ programming languages
+- Automatic language detection
+- Auto-install missing toolchains
+- Watch mode for development
+- Colored output
+- Comprehensive configuration
+- Dry-run mode
+- Progress indicators
+
+## Supported Languages
+
+Interpreted: Python, JavaScript, Ruby, PHP, Perl, Lua, Shell, Elixir, Erlang, Groovy, R, Julia, TypeScript, Dart
+
+Compiled: Go, Java, C, C++, Rust, Zig, Nim, Crystal, D, Haskell, OCaml, F#, Kotlin, Scala, Swift
+
+Esoteric: Brainfuck
+
+## Usage
+
+```
+polyglot run hello.py
+polyglot watch app.js
+polyglot list
+```
+    </description>
+    <releaseNotes>https://github.com/yourusername/polyglot/blob/main/CHANGELOG.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

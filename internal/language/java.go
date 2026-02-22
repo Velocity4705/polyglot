@@ -40,7 +40,7 @@ func (h *JavaHandler) Run(file string, args []string) ([]byte, error) {
 	// Extract class name from file (e.g., HelloWorld.java -> HelloWorld)
 	className := strings.TrimSuffix(filepath.Base(file), ".java")
 	dir := filepath.Dir(file)
-	
+
 	// Change to directory and run
 	cmdArgs := append([]string{className}, args...)
 	cmd := exec.Command("java", cmdArgs...)

@@ -1,7 +1,9 @@
-.PHONY: build install test clean run-tests help
+.PHONY: build install test clean run-tests help version update-check
+
+VERSION := 1.0.1
 
 help:
-	@echo "Polyglot - Universal Compiler Wrapper"
+	@echo "Polyglot - Universal Compiler Wrapper v$(VERSION)"
 	@echo ""
 	@echo "Available targets:"
 	@echo "  make build      - Build the polyglot binary"
@@ -11,6 +13,7 @@ help:
 	@echo "  make clean      - Clean build artifacts"
 	@echo "  make check      - Check code formatting and vet"
 	@echo "  make fmt        - Format code"
+	@echo "  make version    - Show version information"
 	@echo "  make help       - Show this help message"
 
 build:
@@ -57,3 +60,14 @@ run-tests: build
 	@echo ""
 	@echo "Testing with arguments..."
 	@./bin/polyglot run test/fixtures/args.py --args arg1,arg2,arg3
+
+version:
+	@echo "Polyglot v$(VERSION)"
+	@echo "Production Ready - Auto-Update Feature Added!"
+
+update-check: build
+	@echo "Checking for updates..."
+	@./bin/polyglot update --check
+
+all: clean fmt check build test
+	@echo "✓ All tasks complete"

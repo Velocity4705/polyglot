@@ -125,3 +125,71 @@ type LanguageHandler interface {
 	Run(file string, args []string) ([]byte, error)
 	NeedsCompilation() bool
 }
+
+// FromString converts a language name string to Language type
+func FromString(name string) Language {
+	switch name {
+	case "Python":
+		return Python
+	case "Go":
+		return Go
+	case "JavaScript":
+		return JavaScript
+	case "Java":
+		return Java
+	case "C":
+		return C
+	case "C++":
+		return Cpp
+	case "Rust":
+		return Rust
+	case "Ruby":
+		return Ruby
+	case "PHP":
+		return PHP
+	case "Perl":
+		return Perl
+	case "Lua":
+		return Lua
+	case "Zig":
+		return Zig
+	case "Nim":
+		return Nim
+	case "Crystal":
+		return Crystal
+	case "D":
+		return D
+	case "Shell":
+		return Shell
+	case "Haskell":
+		return Haskell
+	case "OCaml":
+		return OCaml
+	case "Elixir":
+		return Elixir
+	case "Erlang":
+		return Erlang
+	case "F#":
+		return FSharp
+	case "Kotlin":
+		return Kotlin
+	case "Scala":
+		return Scala
+	case "Groovy":
+		return Groovy
+	case "Swift":
+		return Swift
+	case "Dart":
+		return Dart
+	case "TypeScript":
+		return TypeScript
+	case "R":
+		return R
+	case "Julia":
+		return Julia
+	case "Brainfuck":
+		return Brainfuck
+	default:
+		return Unknown
+	}
+}

@@ -35,10 +35,24 @@ polyglot version
 
 You should see:
 ```
-Polyglot v0.1.0
-Milestone 1 (MVP)
+Polyglot v1.0.1
+Production Ready - Auto-Update Feature Added!
 Universal compiler and interpreter wrapper
 ```
+
+## Keeping Polyglot Up-to-Date
+
+Polyglot can update itself automatically:
+
+```bash
+# Check for and install updates
+polyglot update
+
+# Only check for updates without installing
+polyglot update --check
+```
+
+Polyglot will also check for updates in the background every 24 hours and notify you when a new version is available.
 
 ## Check Your Toolchains
 

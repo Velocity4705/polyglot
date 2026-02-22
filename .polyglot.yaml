@@ -1,0 +1,43 @@
+# Polyglot Project Configuration Example
+# This file demonstrates project-specific configuration
+
+# Auto-install settings (optional)
+auto_install:
+  enabled: false
+  method: system
+  prompt: true
+
+# Language-specific configuration
+languages:
+  python:
+    enabled: true
+    # Use specific Python version
+    command: python3
+    version: "3.x"
+    # Add optimization flag
+    flags:
+      - "-O"
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+
+  javascript:
+    enabled: true
+    command: node
+    environment:
+      NODE_ENV: "development"
+
+# Custom file extension mappings
+custom_extensions:
+  # Cython files
+  .pyx: Python
+  # React JSX
+  .jsx: JavaScript
+  # TypeScript JSX
+  .tsx: TypeScript
+
+# Global environment variables
+environment:
+  # Add custom paths
+  PATH: "./bin:$PATH"
+  # Set locale
+  LANG: "en_US.UTF-8"

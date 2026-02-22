@@ -1,0 +1,51 @@
+# Development Dockerfile with extensive language support
+FROM ubuntu:22.04
+
+# Prevent interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install common dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    wget \
+    git \
+    build-essential \
+    software-properties-common \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Go
+RUN wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz && \
+    rm go1.21.0.linux-amd64.tar.gz
+ENV PATH="/usr/local/go/bin:${PATH}"
+
+# Install language runtimes
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    nodejs \
+    npm \
+    ruby \
+    php \
+    perl \
+    lua5.3 \
+    default-jdk \
+    gcc \
+    g++ \
+    rustc \
+    cargo \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create symlinks
+RUN ln -s /usr/bin/lua5.3 /usr/bin/lua
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# Set working directory
+WORKDIR /workspace
+
+# Build Polyglot
+COPY . .
+RUN go build -o /usr/local/bin/polyglot ./cmd/polyglot
+
+# Default command
+CMD ["/bin/bash"]

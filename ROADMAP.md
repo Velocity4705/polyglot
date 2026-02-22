@@ -1,224 +1,114 @@
-# Polyglot - Universal Compiler Roadmap
+# Polyglot - Roadmap
 
-## Project Overview
-A universal compiler/interpreter wrapper that detects programming languages by file extension and executes them with the appropriate toolchain.
-
----
-
-## Milestone 1: Core Foundation (MVP)
-**Goal:** Basic CLI that can detect and run 3-5 popular languages
-
-### Features
-- [ ] CLI argument parsing (run, compile commands)
-- [ ] File extension detection
-- [ ] Language registry system
-- [ ] Process execution wrapper
-- [ ] Support for: Python, Go, JavaScript (Node.js)
-- [ ] Basic error handling
-- [ ] Exit code propagation
-
-### Deliverable
-Working `polyglot run <file>` command for 3-5 languages
+Future plans and features for Polyglot.
 
 ---
 
-## Milestone 2: Compiled Languages Support
-**Goal:** Add languages that require compilation step
+## Current Status
 
-### Features
-- [ ] Two-step execution (compile → run)
-- [ ] Temporary build artifact management
-- [ ] Support for: Java, C, C++, Rust
-- [ ] `polyglot compile` command (compile only, no execution)
-- [ ] Cleanup of intermediate files
+**Version**: 1.0.1  
+**Status**: Production Ready ✅
 
-### Deliverable
-Full compile + run workflow for compiled languages
-
----
-
-## Milestone 3: Advanced Language Support
-**Goal:** Expand to more languages and edge cases
-
-### Features
-- [ ] Support for: Ruby, PHP, Perl, Lua
-- [ ] Support for: Zig, Nim, Crystal, D
-- [ ] Support for: Assembly (NASM, FASM)
-- [ ] Support for: Shell scripts (bash, zsh)
-- [ ] Language version detection (python2 vs python3)
-- [ ] Configurable compiler flags per language
-
-### Deliverable
-20+ language support with robust detection
+Polyglot currently supports:
+- ✅ 30 programming languages
+- ✅ 9 CLI commands
+- ✅ Auto-install system
+- ✅ Configuration management
+- ✅ Watch mode
+- ✅ Colored output
+- ✅ Auto-update feature
+- ✅ Multi-platform support
 
 ---
 
-## Milestone 4: Esoteric & Specialty Languages
-**Goal:** Support for unusual and esoteric languages
+## Future Plans
 
-### Features
-- [ ] Support for: Brainfuck, Whitespace, Befunge
-- [ ] Support for: LOLCODE, Chicken, Malbolge
-- [ ] Support for: Haskell, OCaml, F#, Erlang, Elixir
-- [ ] Support for: Kotlin, Scala, Clojure
-- [ ] Custom interpreter path configuration
+### v1.1.0 - Security & Stability
+**Focus**: Improve update security and fix bugs
 
-### Deliverable
-40+ languages including esoteric ones
+- SHA256 checksum verification for updates
+- GPG signature verification
+- Beta/nightly release channels
+- Bug fixes from user feedback
+- Performance optimizations
 
----
+### v1.2.0 - Project Support
+**Focus**: Handle real-world projects
 
-## Milestone 5: Auto-Install System ⭐ NEW!
-**Goal:** Automatic system-wide toolchain installation
+- Multi-file project support (handle imports)
+- Build system integration (Makefile, Cargo.toml, package.json)
+- Dependency management (auto-install pip, npm, cargo packages)
+- Project detection and configuration
 
-### Features
-- [ ] Detect missing toolchains when running code
-- [ ] Prompt user to install (with details)
-- [ ] Auto-install using system package manager (dnf/apt/brew/pacman)
-- [ ] `polyglot install <language>` command
-- [ ] Package name mapping for all 16+ languages
-- [ ] Sudo handling and security prompts
-- [ ] Installation progress indicators
-- [ ] Error handling and fallbacks
-- [ ] Config file: `~/.polyglot/config.yaml`
-- [ ] Auto-install mode (skip prompts)
-- [ ] Manual mode (show instructions only)
-- [ ] `polyglot status` command
+### v1.3.0 - Advanced Features
+**Focus**: Security and isolation
 
-### User Experience
-```bash
-$ polyglot run hello.py
-⚠️  Python not found
-📦 Install Python 3.12 system-wide? [Y/n] y
-   Installing via dnf... ✓
-✅ Python installed!
-🚀 Running hello.py...
-```
-
-### Benefits
-- ✅ Zero-config experience - just run your code
-- ✅ Languages installed system-wide (works with all tools)
-- ✅ One-time installation per language
-- ✅ Integrates with system package manager
-- ✅ Natural learning curve - install as you need
-
-### Deliverable
-Truly universal experience - Polyglot handles everything!
-
-See [AUTO_INSTALL_DESIGN.md](docs/AUTO_INSTALL_DESIGN.md) for complete design.
-
----
-
-## Milestone 6: Configuration & Customization
-**Goal:** Advanced configuration and customization
-
-### Features
-- [ ] Enhanced config file (~/.polyglot/config.yaml)
-- [ ] Custom language definitions
-- [ ] Per-project config (.polyglot.yaml)
-- [ ] Environment variable support
-- [ ] Compiler flag templates
-- [ ] Custom file extension mappings
-- [ ] Version management per language
-- [ ] Alternative installation methods (scripts, binaries)
-
-### Deliverable
-Fully customizable language toolchain configuration
-
----
-
-## Milestone 7: Developer Experience
-**Goal:** Polish the UX and add helpful features
-
-### Features
-- [ ] Verbose mode (`-v, --verbose`)
-- [ ] Quiet mode (`-q, --quiet`)
-- [ ] Dry run mode (`--dry-run`)
-- [ ] Pass arguments to programs (`--args`)
-- [ ] Watch mode for development (`polyglot watch`)
-- [ ] Colored output
-- [ ] Progress indicators for long compilations
-- [ ] Better error messages with suggestions
-
-### Deliverable
-Production-ready CLI with excellent UX
-
----
-
-## Milestone 7: Performance & Optimization
-**Goal:** Make it fast and efficient
-
-### Features
-- [ ] Parallel compilation support
-- [ ] Build caching
-- [ ] Incremental compilation detection
-- [ ] Benchmark mode
-- [ ] Memory usage optimization
-- [ ] Startup time optimization
-
-### Deliverable
-Fast, efficient execution with caching
-
----
-
-## Milestone 8: Testing & Quality
-**Goal:** Comprehensive testing and reliability
-
-### Features
-- [ ] Unit tests for all language handlers
-- [ ] Integration tests
-- [ ] CI/CD pipeline
-- [ ] Cross-platform testing (Linux, macOS, Windows)
-- [ ] Error scenario testing
-- [ ] Performance benchmarks
-
-### Deliverable
-95%+ test coverage, reliable across platforms
-
----
-
-## Milestone 9: Distribution & Packaging
-**Goal:** Easy installation and distribution
-
-### Features
-- [ ] Homebrew formula (macOS/Linux)
-- [ ] apt/yum packages (Linux)
-- [ ] Chocolatey package (Windows)
-- [ ] Docker image
-- [ ] Pre-built binaries for all platforms
-- [ ] Auto-update mechanism
-- [ ] Installation script
-
-### Deliverable
-Easy installation on all major platforms
-
----
-
-## Milestone 10: Documentation & Community
-**Goal:** Complete documentation and community building
-
-### Features
-- [ ] Comprehensive README
-- [ ] Language support matrix
-- [ ] Contributing guide
-- [ ] API documentation
-- [ ] Example projects
-- [ ] Video tutorials
-- [ ] Website/landing page
-- [ ] Plugin system for community extensions
-
-### Deliverable
-Complete documentation, active community
-
----
-
-## Future Ideas (Post 1.0)
-- Language server protocol (LSP) integration
-- IDE plugins (VSCode, IntelliJ, etc.)
+- Container-based execution (Docker integration)
+- Sandboxed execution mode
+- Resource limits (CPU, memory, time)
 - Remote execution support
-- Container-based isolated execution
-- Language playground web interface
-- Package manager integration
-- Dependency management
-- Multi-file project support
-- Build system integration (Make, CMake, etc.)
+
+### v2.0.0 - Performance & Scale
+**Focus**: Speed and efficiency
+
+- Build caching
+- Parallel compilation
+- Incremental builds
+- Performance benchmarks
+- Memory optimizations
+
+---
+
+## Community Contributions Welcome
+
+We welcome contributions in these areas:
+
+- **Additional language support** - Submit PRs for new languages
+- **IDE integration guides** - Document how to use Polyglot with VSCode, IntelliJ, etc.
+- **CI/CD templates** - Pre-built configs for GitHub Actions, GitLab CI
+- **Language-specific optimizations** - Improve handling for specific languages
+- **Documentation improvements** - Better examples, tutorials, guides
+
+---
+
+## Out of Scope
+
+These features are intentionally NOT planned:
+
+- ❌ **Language Server Protocol (LSP)** - Each language has its own LSP server
+- ❌ **Code editing features** - Polyglot is for execution, not editing
+- ❌ **Plugin system** - Just add languages to core or fork the project
+- ❌ **Web playground** - Just install locally (takes 30 seconds)
+- ❌ **IDE-like features** - Use proper IDEs for development
+
+**Why?** Polyglot focuses on doing ONE thing well: executing code in any language.
+
+---
+
+## Philosophy
+
+**"The best CLI tools do one thing well."**
+
+- `git` → Version control
+- `docker` → Containers
+- `make` → Build automation
+- `polyglot` → Universal code execution
+
+We keep Polyglot focused on its core purpose: making it easy to run code in any programming language.
+
+---
+
+## Feedback & Suggestions
+
+Have ideas for Polyglot? We'd love to hear them!
+
+- Open an issue on GitHub
+- Start a discussion
+- Submit a pull request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+**Last Updated**: 2026-02-22  
+**Current Version**: 1.0.1

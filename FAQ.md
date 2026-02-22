@@ -48,12 +48,15 @@ sudo dnf install python3 gcc nodejs  # Example
 - ✅ No licensing issues
 - ✅ Respects system package management
 
-**Future Plan (Hybrid Model):**
-We're planning to add automatic toolchain downloading in Milestone 5! See [TOOLCHAIN_MANAGEMENT.md](docs/TOOLCHAIN_MANAGEMENT.md).
+**Yes!** Polyglot can auto-install missing toolchains using your system package manager.
+
+When you try to run code in a language that's not installed, Polyglot will offer to install it for you.
+
+See [AUTO_UPDATE.md](docs/AUTO_UPDATE.md) for details.
 
 ### Can Polyglot auto-install missing languages?
 
-**Not yet**, but it's planned for Milestone 5!
+**Yes!** Use the `polyglot install` command or let Polyglot prompt you when a language is missing.
 
 **Current behavior:**
 ```bash
@@ -205,13 +208,9 @@ Polyglot uses whatever is in your PATH:
 which python3  # Shows which Python Polyglot will use
 ```
 
-**Future:** Version management coming in Milestone 5!
-
 ### Does Polyglot work on Windows?
 
-The code is cross-platform, but it's primarily tested on Linux and macOS.
-
-Windows support is planned for Milestone 9 (Distribution).
+**Yes!** Polyglot supports Windows, macOS, and Linux.
 
 ### How big is the Polyglot binary?
 
@@ -353,23 +352,14 @@ polyglot run -v hello.c
 
 ### What's coming next?
 
-**Milestone 4:** More languages (Haskell, OCaml, Kotlin, Scala, etc.)
+See [ROADMAP.md](ROADMAP.md) for future plans.
 
-**Milestone 5:** Automatic toolchain management
-- Auto-download missing toolchains
-- Version management
-- `polyglot install <language>` command
-
-**Milestone 6:** Developer experience
-- Watch mode
-- Colored output
-- Better error messages
-
-See [ROADMAP.md](ROADMAP.md) for the complete plan.
-
-### When will auto-download be available?
-
-Planned for Milestone 5, estimated 2-3 weeks after Milestone 4.
+**Upcoming features:**
+- Multi-file project support
+- Build system integration
+- Dependency management
+- Container-based execution
+- Performance optimizations
 
 ### Will Polyglot support my favorite language?
 
