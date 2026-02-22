@@ -1,14 +1,10 @@
 run:
   timeout: 5m
   tests: true
-  skip-dirs:
-    - test/fixtures
 
 issues:
   exclude-dirs:
     - test/fixtures
-  exclude-files:
-    - "test/fixtures/.*"
   max-issues-per-linter: 0
   max-same-issues: 0
 

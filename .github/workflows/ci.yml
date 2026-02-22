@@ -24,6 +24,14 @@ jobs:
       with:
         go-version: ${{ matrix.go-version }}
 
+    - name: Verify workspace
+      run: |
+        echo "Current directory: $(pwd)"
+        echo "Directory contents:"
+        ls -la
+        echo "Checking for cmd directory:"
+        test -d cmd && echo "✓ cmd directory exists" || echo "✗ cmd directory missing"
+
     - name: Install dependencies
       run: |
         go mod download
