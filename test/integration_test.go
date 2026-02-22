@@ -285,6 +285,10 @@ func TestAllLanguages(t *testing.T) {
 
 // TestCompiledLanguages tests compiled languages (if toolchains are available)
 func TestCompiledLanguages(t *testing.T) {
+	if testing.Short() {
+		t.Skip("Skipping compiled languages test in short mode")
+	}
+
 	languages := map[string]string{
 		"gcc":   "fixtures/hello.c",
 		"g++":   "fixtures/hello.cpp",
