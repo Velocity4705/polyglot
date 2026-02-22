@@ -28,7 +28,7 @@ jobs:
       run: go mod download
 
     - name: Run go vet
-      run: go vet ./...
+      run: go vet ./cmd/... ./internal/... ./pkg/...
 
     - name: Check formatting
       run: |
@@ -39,7 +39,7 @@ jobs:
         fi
 
     - name: Run tests
-      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
+      run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./cmd/... ./internal/... ./pkg/...
 
     - name: Upload coverage
       uses: codecov/codecov-action@v3

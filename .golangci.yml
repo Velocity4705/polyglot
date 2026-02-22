@@ -1,0 +1,32 @@
+run:
+  timeout: 5m
+  tests: true
+  skip-dirs:
+    - test/fixtures
+  skip-files:
+    - ".*\\.pb\\.go$"
+
+linters:
+  enable:
+    - gofmt
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - ineffassign
+
+linters-settings:
+  govet:
+    check-shadowing: false
+
+issues:
+  exclude-rules:
+    - path: test/
+      linters:
+        - errcheck
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+output:
+  format: colored-line-number
