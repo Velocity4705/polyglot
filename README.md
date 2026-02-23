@@ -39,6 +39,18 @@ make build
 sudo make install
 ```
 
+**Docker**:
+```bash
+# Build the image
+docker build -t polyglot .
+
+# Run a file
+docker run -v $(pwd):/workspace polyglot run hello.py
+
+# Or use docker-compose
+docker-compose run polyglot run hello.py
+```
+
 ### Usage
 
 ```bash
@@ -205,16 +217,37 @@ custom_extensions:
 
 ## 🐳 Docker
 
-### Quick Run
+Polyglot comes with Docker support including common language runtimes.
+
+### Build Image
 ```bash
-docker run -v $(pwd):/workspace velocity4705/polyglot run hello.py
+docker build -t polyglot .
 ```
 
-### Development Environment
+### Run Files
 ```bash
+# Run a Python file
+docker run -v $(pwd):/workspace polyglot run hello.py
+
+# Run a JavaScript file
+docker run -v $(pwd):/workspace polyglot run app.js
+
+# Run with arguments
+docker run -v $(pwd):/workspace polyglot run script.py arg1 arg2
+```
+
+### Using Docker Compose
+```bash
+# Run a file
+docker-compose run polyglot run hello.py
+
+# Development environment (includes all languages)
 docker-compose up -d polyglot-dev
 docker-compose exec polyglot-dev bash
 ```
+
+### Included Languages
+The Docker image includes: Python, Node.js, Ruby, PHP, Perl, Lua, Bash, GCC, G++, and Go.
 
 ## 📊 Performance
 
