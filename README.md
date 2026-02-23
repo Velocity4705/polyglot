@@ -221,6 +221,11 @@ Polyglot comes with Docker support including common language runtimes.
 
 ### Build Image
 ```bash
+# Clone the repository first
+git clone https://github.com/Velocity4705/polyglot.git
+cd polyglot
+
+# Build the image
 docker build -t polyglot .
 ```
 
