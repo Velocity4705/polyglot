@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/polyglot/internal/ui"
-	"github.com/yourusername/polyglot/internal/updater"
+	"github.com/Velocity4705/polyglot/internal/ui"
+	"github.com/Velocity4705/polyglot/internal/updater"
 )
 
 var (

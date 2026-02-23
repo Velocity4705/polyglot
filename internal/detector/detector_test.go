@@ -3,7 +3,7 @@ package detector
 import (
 	"testing"
 
-	"github.com/yourusername/polyglot/pkg/types"
+	"github.com/Velocity4705/polyglot/pkg/types"
 )
 
 func TestDetectLanguage(t *testing.T) {

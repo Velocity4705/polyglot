@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/polyglot/internal/language"
+	"github.com/Velocity4705/polyglot/internal/language"
 )
 
 var listCmd = &cobra.Command{

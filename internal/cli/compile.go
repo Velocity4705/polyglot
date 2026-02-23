@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/polyglot/internal/detector"
-	"github.com/yourusername/polyglot/internal/executor"
-	"github.com/yourusername/polyglot/internal/language"
+	"github.com/Velocity4705/polyglot/internal/detector"
+	"github.com/Velocity4705/polyglot/internal/executor"
+	"github.com/Velocity4705/polyglot/internal/language"
 )
 
 var compileCmd = &cobra.Command{

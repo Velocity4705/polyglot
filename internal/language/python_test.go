@@ -3,7 +3,7 @@ package language
 import (
 	"testing"
 
-	"github.com/yourusername/polyglot/pkg/types"
+	"github.com/Velocity4705/polyglot/pkg/types"
 )
 
 func TestPythonHandler(t *testing.T) {

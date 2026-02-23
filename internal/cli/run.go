@@ -6,13 +6,13 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/polyglot/internal/config"
-	"github.com/yourusername/polyglot/internal/detector"
-	"github.com/yourusername/polyglot/internal/executor"
-	"github.com/yourusername/polyglot/internal/installer"
-	"github.com/yourusername/polyglot/internal/language"
-	"github.com/yourusername/polyglot/internal/ui"
-	"github.com/yourusername/polyglot/pkg/types"
+	"github.com/Velocity4705/polyglot/internal/config"
+	"github.com/Velocity4705/polyglot/internal/detector"
+	"github.com/Velocity4705/polyglot/internal/executor"
+	"github.com/Velocity4705/polyglot/internal/installer"
+	"github.com/Velocity4705/polyglot/internal/language"
+	"github.com/Velocity4705/polyglot/internal/ui"
+	"github.com/Velocity4705/polyglot/pkg/types"
 )
 
 var (

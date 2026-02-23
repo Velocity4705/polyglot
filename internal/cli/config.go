@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/polyglot/internal/config"
+	"github.com/Velocity4705/polyglot/internal/config"
 	yaml "gopkg.in/yaml.v3"
 )
 
