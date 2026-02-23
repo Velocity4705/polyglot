@@ -39,14 +39,14 @@ make build
 sudo make install
 ```
 
-**Docker** (from home directory):
+**Docker**:
 ```bash
 git clone https://github.com/Velocity4705/polyglot.git
 cd polyglot
 docker build -t polyglot .
 
 # Run a file
-docker run -v $(pwd):/workspace polyglot run hello.py
+docker run -v $(pwd):/workspace polyglot -h
 ```
 
 ### Usage
@@ -227,26 +227,46 @@ cd polyglot
 docker build -t polyglot .
 ```
 
-### Run Files
+### Usage Examples
+
+**Run files from your current directory:**
 ```bash
-# Run a Python file
+# Create a test file
+echo 'print("Hello from Docker!")' > hello.py
+
+# Run it with polyglot in Docker
 docker run -v $(pwd):/workspace polyglot run hello.py
 
-# Run a JavaScript file
-docker run -v $(pwd):/workspace polyglot run app.js
+# Run JavaScript
+echo 'console.log("Hello from Docker!");' > hello.js
+docker run -v $(pwd):/workspace polyglot run hello.js
 
 # Run with arguments
 docker run -v $(pwd):/workspace polyglot run script.py arg1 arg2
 ```
 
-### Using Docker Compose
+**Interactive shell with all languages:**
 ```bash
-# Run a file
-docker-compose run polyglot run hello.py
-
-# Development environment (includes all languages)
+# Start development container
 docker-compose up -d polyglot-dev
 docker-compose exec polyglot-dev bash
+
+# Now you're inside the container with all languages available
+polyglot list
+polyglot run hello.py
+exit
+```
+
+**Quick commands:**
+```bash
+# List supported languages
+docker run polyglot list
+
+# Check version
+docker run polyglot version
+
+# Get help
+docker run polyglot --help
 ```
 
 ### Included Languages
