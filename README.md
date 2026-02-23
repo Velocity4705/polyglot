@@ -39,16 +39,14 @@ make build
 sudo make install
 ```
 
-**Docker**:
+**Docker** (from home directory):
 ```bash
-# Build the image
+git clone https://github.com/Velocity4705/polyglot.git
+cd polyglot
 docker build -t polyglot .
 
 # Run a file
 docker run -v $(pwd):/workspace polyglot run hello.py
-
-# Or use docker-compose
-docker-compose run polyglot run hello.py
 ```
 
 ### Usage
