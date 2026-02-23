@@ -3,8 +3,8 @@ package cli
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/Velocity4705/polyglot/internal/language"
+	"github.com/spf13/cobra"
 )
 
 var listCmd = &cobra.Command{

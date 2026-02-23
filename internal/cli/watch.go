@@ -5,7 +5,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/spf13/cobra"
 	"github.com/Velocity4705/polyglot/internal/config"
 	"github.com/Velocity4705/polyglot/internal/detector"
 	"github.com/Velocity4705/polyglot/internal/executor"
@@ -13,6 +12,7 @@ import (
 	"github.com/Velocity4705/polyglot/internal/ui"
 	"github.com/Velocity4705/polyglot/internal/watcher"
 	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/spf13/cobra"
 )
 
 var (

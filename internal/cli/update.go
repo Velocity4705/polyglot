@@ -3,9 +3,9 @@ package cli
 import (
 	"os"
 
-	"github.com/spf13/cobra"
 	"github.com/Velocity4705/polyglot/internal/ui"
 	"github.com/Velocity4705/polyglot/internal/updater"
+	"github.com/spf13/cobra"
 )
 
 var (
