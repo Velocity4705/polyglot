@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Velocity4705/polyglot/internal/cli"
-	"github.com/Velocity4705/polyglot/internal/updater"
+	"github.com/velo4705/polyglot/internal/cli"
+	"github.com/velo4705/polyglot/internal/updater"
 )
 
 const version = "1.0.1"

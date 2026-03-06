@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Velocity4705/polyglot/internal/detector"
-	"github.com/Velocity4705/polyglot/internal/executor"
-	"github.com/Velocity4705/polyglot/internal/language"
+	"github.com/velo4705/polyglot/internal/detector"
+	"github.com/velo4705/polyglot/internal/executor"
+	"github.com/velo4705/polyglot/internal/language"
 	"github.com/spf13/cobra"
 )
 

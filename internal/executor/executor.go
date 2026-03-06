@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Velocity4705/polyglot/internal/config"
-	"github.com/Velocity4705/polyglot/internal/ui"
-	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/velo4705/polyglot/internal/config"
+	"github.com/velo4705/polyglot/internal/ui"
+	"github.com/velo4705/polyglot/pkg/types"
 )
 
 type ExecutionError struct {

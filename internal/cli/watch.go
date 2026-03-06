@@ -5,13 +5,13 @@ import (
 	"os"
 	"time"
 
-	"github.com/Velocity4705/polyglot/internal/config"
-	"github.com/Velocity4705/polyglot/internal/detector"
-	"github.com/Velocity4705/polyglot/internal/executor"
-	"github.com/Velocity4705/polyglot/internal/language"
-	"github.com/Velocity4705/polyglot/internal/ui"
-	"github.com/Velocity4705/polyglot/internal/watcher"
-	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/velo4705/polyglot/internal/config"
+	"github.com/velo4705/polyglot/internal/detector"
+	"github.com/velo4705/polyglot/internal/executor"
+	"github.com/velo4705/polyglot/internal/language"
+	"github.com/velo4705/polyglot/internal/ui"
+	"github.com/velo4705/polyglot/internal/watcher"
+	"github.com/velo4705/polyglot/pkg/types"
 	"github.com/spf13/cobra"
 )
 

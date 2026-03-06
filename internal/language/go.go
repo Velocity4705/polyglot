@@ -3,7 +3,7 @@ package language
 import (
 	"os/exec"
 
-	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/velo4705/polyglot/pkg/types"
 )
 
 type GoHandler struct{}

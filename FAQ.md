@@ -372,7 +372,7 @@ Probably! Check the [ROADMAP.md](ROADMAP.md) or open an issue to request it.
 ### Where can I get help?
 
 - 📖 Read the [Quick Start Guide](docs/QUICKSTART.md)
-- 💬 Open an [Issue](https://github.com/Velocity4705/polyglot/issues)
+- 💬 Open an [Issue](https://github.com/velo4705/polyglot/issues)
 - 📚 Check [Examples](docs/EXAMPLES.md)
 - 🎯 See the [Demo](DEMO.md)
 

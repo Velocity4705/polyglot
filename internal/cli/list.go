@@ -3,7 +3,7 @@ package cli
 import (
 	"fmt"
 
-	"github.com/Velocity4705/polyglot/internal/language"
+	"github.com/velo4705/polyglot/internal/language"
 	"github.com/spf13/cobra"
 )
 

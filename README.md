@@ -1,9 +1,9 @@
 # Polyglot - Universal Compiler Wrapper
 
-[![CI](https://github.com/Velocity4705/polyglot/workflows/CI/badge.svg)](https://github.com/Velocity4705/polyglot/actions)
+[![CI](https://github.com/velo4705/polyglot/workflows/CI/badge.svg)](https://github.com/velo4705/polyglot/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go)](https://go.dev/)
-[![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/Velocity4705/polyglot/releases)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/velo4705/polyglot/releases)
 
 A universal compiler and interpreter wrapper that detects programming languages by file extension and executes them with the appropriate toolchain.
 
@@ -28,12 +28,12 @@ A universal compiler and interpreter wrapper that detects programming languages 
 
 **Quick Install (one-liner)**:
 ```bash
-curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/velo4705/polyglot/main/scripts/install.sh | bash
 ```
 
 **Or install from source**:
 ```bash
-git clone https://github.com/Velocity4705/polyglot.git
+git clone https://github.com/velo4705/polyglot.git
 cd polyglot
 make build
 sudo make install
@@ -41,7 +41,7 @@ sudo make install
 
 **Docker**:
 ```bash
-git clone https://github.com/Velocity4705/polyglot.git
+git clone https://github.com/velo4705/polyglot.git
 cd polyglot
 docker build -t polyglot .
 
@@ -220,7 +220,7 @@ Polyglot comes with Docker support including common language runtimes.
 ### Build Image
 ```bash
 # Clone the repository first
-git clone https://github.com/Velocity4705/polyglot.git
+git clone https://github.com/velo4705/polyglot.git
 cd polyglot
 
 # Build the image

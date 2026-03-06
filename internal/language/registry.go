@@ -1,7 +1,7 @@
 package language
 
 import (
-	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/velo4705/polyglot/pkg/types"
 )
 
 var handlers = map[types.Language]types.LanguageHandler{

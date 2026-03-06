@@ -1,6 +1,6 @@
 #!/bin/bash
 # Polyglot Quick Installer
-# Usage: curl -sSL https://raw.githubusercontent.com/Velocity4705/polyglot/main/scripts/install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/velo4705/polyglot/main/scripts/install.sh | bash
 
 set -e
 
@@ -12,7 +12,7 @@ echo "→ Using temp directory: $TEMP_DIR"
 cd "$TEMP_DIR" || exit 1
 
 echo "→ Cloning repository..."
-if ! git clone --depth 1 https://github.com/Velocity4705/polyglot.git; then
+if ! git clone --depth 1 https://github.com/velo4705/polyglot.git; then
     echo "✗ Failed to clone repository"
     exit 1
 fi

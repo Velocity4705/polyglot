@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Velocity4705/polyglot/pkg/types"
+	"github.com/velo4705/polyglot/pkg/types"
 )
 
 type JavaHandler struct{}

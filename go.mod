@@ -1,4 +1,4 @@
-module github.com/Velocity4705/polyglot
+module github.com/velo4705/polyglot
 
 go 1.21
 

@@ -12,11 +12,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Velocity4705/polyglot/internal/ui"
+	"github.com/velo4705/polyglot/internal/ui"
 )
 
 const (
-	githubAPIURL    = "https://api.github.com/repos/Velocity4705/polyglot/releases/latest"
+	githubAPIURL    = "https://api.github.com/repos/velo4705/polyglot/releases/latest"
 	updateCheckFile = ".polyglot/last_update_check"
 	checkInterval   = 24 * time.Hour
 )
